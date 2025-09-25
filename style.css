@@ -161,48 +161,36 @@ footer {
   padding: 20px;
 }
 
-/* Photo row styling */
 .photo-row {
   display: flex;
   justify-content: space-between; /* spread evenly */
-  gap: 10px; /* spacing between photos */
+  flex-wrap: nowrap;              /* keep in single line */
+  gap: 10px;                      /* space between photos */
   margin: 20px 0;
-  flex-wrap: wrap; /* wrap on smaller screens */
 }
 
 .photo-row img {
-  flex: 1 1 calc(25% - 7.5px); /* 4 images in a row with spacing */
-  max-width: 100%; /* prevent overflow */
+  width: 18%;          /* 5 photos in a row with spacing */
   height: auto;
   border-radius: 8px;
   object-fit: cover;
   display: block;
 }
 
-/* Responsive adjustments */
+/* Responsive for tablets */
 @media (max-width: 768px) {
+  .photo-row {
+    flex-wrap: wrap;
+  }
   .photo-row img {
-    flex: 1 1 calc(50% - 5px); /* 2 images per row on tablet */
+    width: 48%;       /* 2 photos per row */
     margin-bottom: 10px;
   }
 }
 
+/* Responsive for mobile */
 @media (max-width: 480px) {
   .photo-row img {
-    flex: 1 1 100%; /* 1 image per row on mobile */
+    width: 100%;      /* 1 photo per row */
   }
 }
-
-/* Social links alignment */
-.social-links {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  margin-top: 10px;
-}
-.social-links img {
-  width: 40px;
-  height: 40px;
-}
-
-
