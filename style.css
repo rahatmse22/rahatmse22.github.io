@@ -148,3 +148,8 @@ footer {
 .skills li {
   margin-bottom: 6px;
 }
+/* --- Titles for Thesis, Articles, and Projects --- */
+.thesis h3,
+.articles h4,
+.projects h4 {
+  color: var(--accent);  /* Green accent color */
