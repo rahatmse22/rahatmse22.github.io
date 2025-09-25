@@ -154,5 +154,55 @@ footer {
 .title-green {
   color: #28a745 !important; /* !important ensures it overrides other heading styles */
 }
+/* Container alignment (optional if not already set) */
+.container {
+  max-width: 900px; /* align content width */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Photo row styling */
+.photo-row {
+  display: flex;
+  justify-content: space-between; /* spread evenly */
+  gap: 10px; /* spacing between photos */
+  margin: 20px 0;
+  flex-wrap: wrap; /* wrap on smaller screens */
+}
+
+.photo-row img {
+  flex: 1 1 calc(25% - 7.5px); /* 4 images in a row with spacing */
+  max-width: 100%; /* prevent overflow */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .photo-row img {
+    flex: 1 1 calc(50% - 5px); /* 2 images per row on tablet */
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-row img {
+    flex: 1 1 100%; /* 1 image per row on mobile */
+  }
+}
+
+/* Social links alignment */
+.social-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+.social-links img {
+  width: 40px;
+  height: 40px;
+}
 
 
