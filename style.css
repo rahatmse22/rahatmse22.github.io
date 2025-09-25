@@ -92,3 +92,59 @@ footer {
 .social-links img:hover {
   transform: scale(1.15);
 }
+/* --- Academic Section --- */
+.education {
+  display: flex;               /* align info and logo horizontally */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.edu-info h3 {
+  margin: 0;
+  color: var(--accent);
+}
+
+.edu-info p {
+  margin: 4px 0;
+  color: var(--muted);
+}
+
+.edu-logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .education {
+    flex-direction: column;   /* stack logo below text on small screens */
+    align-items: flex-start;
+  }
+
+  .edu-logo {
+    margin-top: 10px;
+  }
+}
+
+/* --- Skills Section --- */
+.skills {
+  margin-top: 30px;
+}
+
+.skills h3 {
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.skills ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.skills li {
+  margin-bottom: 6px;
+}
