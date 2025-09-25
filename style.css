@@ -1,10 +1,94 @@
-body{font-family:Inter,Arial,sans-serif;margin:0;background:#0f1724;color:#e6eef6;line-height:1.6}
-.container{max-width:900px;margin:auto;padding:20px}
-header{margin-bottom:20px}
-.avatar{width:120px;border-radius:10px;margin-bottom:10px}
-nav{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
-a{color:#6ee7b7;text-decoration:none;font-weight:600}
-a.btn{padding:6px 10px;border:1px solid #6ee7b7;border-radius:6px}
-a.primary{background:#6ee7b7;color:#052019;border:none}
-main{margin-top:20px}
-footer{text-align:center;margin-top:30px;color:#9aa6b2;font-size:14px}
+:root {
+  --bg: #0f1724;
+  --muted: #9aa6b2;
+  --accent: #6ee7b7;
+}
+
+body {
+  font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+  line-height: 1.5;
+  margin: 0;
+  background: linear-gradient(180deg, #071129 0%, #081424 100%);
+  color: #e6eef6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.06);
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+p.lead {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+nav {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+a.btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+a.primary {
+  background: linear-gradient(90deg, var(--accent), #60a5fa);
+  color: #052019;
+  border: none;
+}
+
+main {
+  margin-top: 24px;
+}
+
+footer {
+  margin-top: 40px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* --- Social Media Icons --- */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
+}
+
+.social-links img:hover {
+  transform: scale(1.15);
+}
