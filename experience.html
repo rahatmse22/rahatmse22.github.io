@@ -3,25 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Experience — YOUR NAME</title>
+  <title>Experience — Rahat Hasan</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Basic layout */
+    .experience-section {
+      margin-bottom: 30px;
+    }
+
+    .experience-section h3 {
+      margin-bottom: 10px;
+      color: #28a745; /* Green titles, same as Research page */
+    }
+
+    .photos-row {
+      display: flex;
+      gap: 10px; /* space between photos */
+      margin-top: 10px;
+    }
+
+    .photos-row img {
+      width: 32%; /* 3 photos in a row, with some gap */
+      border-radius: 8px;
+      border: 1px solid rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <header>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="academics.html">Academics</a>
-        <a href="research.html">Research</a>
-        <a href="honors.html">Honors</a>
+        <a href="index.html" class="btn">Home</a>
+        <a href="academics.html" class="btn">Academics</a>
+        <a href="research.html" class="btn">Research & Projects</a>
+        <a href="honors.html" class="btn">Honors & Awards</a>
       </nav>
     </header>
+
     <main>
       <h2>Experience</h2>
-      <p>[List your work experience, internships, and industrial attachments with details]</p>
+
+      <!-- Work Experience -->
+      <section class="experience-section">
+        <h3>Work Experience</h3>
+        <h4>Graduate Engineer Trainee</h4>
+        <p>Tex Fasteners - A renowned multinational Metal Zipper and Button Manufacturing Industry</p>
+        <p><strong>Duration:</strong> December 2024 - Present</p>
+      </section>
+
+      <!-- Industrial Attachment -->
+      <section class="experience-section">
+        <h3>Industrial Attachment</h3>
+        <h4>BSRM Limited</h4>
+        <p>The leading mild steel billet and rebar manufacturing company in Bangladesh</p>
+
+        <!-- Photos in a row -->
+        <div class="photos-row">
+          <img src="images/att1.jpg" alt="BSRM Photo 1">
+          <img src="images/att2.jpg" alt="BSRM Photo 2">
+          <img src="images/att3.jpg" alt="BSRM Photo 3">
+        </div>
+      </section>
+
     </main>
-    <footer><p>Made with ❤️</p></footer>
+
+    <footer>
+      <p>Made with html</p>
+    </footer>
   </div>
 </body>
 </html>
