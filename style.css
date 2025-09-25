@@ -151,4 +151,8 @@ footer {
 .title-green {
   color: #28a745; /* You can change this to any green you like */
 }
+.title-green {
+  color: #28a745 !important; /* !important ensures it overrides other heading styles */
+}
+
 
