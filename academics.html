@@ -15,6 +15,22 @@
     h3 {
       color: #28a745; /* Same green as other pages */
     }
+
+    /* Image row styling */
+    .image-row {
+      display: flex;
+      gap: 15px;
+      margin: 15px 0;
+      justify-content: center;
+      flex-wrap: wrap; /* If screen is small, wraps images */
+    }
+
+    .image-row img {
+      height: 120px; /* All same height */
+      width: auto;   /* Keep aspect ratio */
+      border-radius: 8px;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body>
@@ -49,7 +65,7 @@
       <div class="education">
         <div class="edu-info">
           <h3 class="title-green">Higher Secondary Certificate (HSC)</h3>
-          <p>June 2018</p>
+           <p>June 2018</p>
           <p>Government Science College, Tejgaon, Dhaka</p>
           <p>GPA: 5.00/5.00</p>
         </div>
@@ -82,20 +98,33 @@
           <li>Python (Numpy, Pandas)</li>
         </ul>
 
+        <!-- Technical Skills Images -->
+        <div class="image-row">
+          <img src="images/lammps.png" alt="Skill 1">
+          <img src="images/mats.jpg" alt="Skill 2">
+          <img src="images/ovito.jpeg" alt="Skill 3">
+          <img src="images/numpan.jpg" alt="Skill 4">
+        </div>
+
         <h3 class="title-green">Soft Skills</h3>
         <ul>
           <li>Adaptability, Team Work, Problem Solving, Critical Thinking</li>
         </ul>
       </div>
+
       <!-- Research Interest -->
-      <h2>Research Ineterests</h2>
-      
-        
-        <p>High Entropy Alloys, Additive Manufacturing, Advanced manufacturing, 
-Materials Processing, Optoelectronic materials, Density Functional Theory, Molecular Dynamics</p>
-        
-        
+      <h2>Research Interests</h2>
+      <p>High Entropy Alloys, Additive Manufacturing, Advanced manufacturing, 
+      Materials Processing, Optoelectronic materials, Density Functional Theory, Molecular Dynamics</p>
+
+      <!-- Research Interests Images -->
+      <div class="image-row">
+        <img src="images/hea.jpg" alt="Research 1">
+        <img src="images/matpros.jpg" alt="Research 2">
+        <img src="images/opto.jpg" alt="Research 3">
+        <img src="images/addman.jpg" alt="Research 4">
       </div>
+
     </main>
 
     <footer>
