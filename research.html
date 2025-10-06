@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,33 +7,47 @@
   <title>Research & Projects — Rahat Hasan</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Optional styles for graphical abstracts and projects */
-    .project-photo img,
-    .graphical-abstract img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 10px;
+    .toggle-section {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px 0;
+      padding: 10px;
+      background: rgba(0,0,0,0.05);
       border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.1);
     }
 
-    .articles article {
-      margin-bottom: 30px;
+    .toggle-section img {
+      max-width: 120px;
+      height: auto;
+      margin-left: 20px;
+      border-radius: 8px;
     }
 
-    .graphical-abstract {
-      margin-top: 10px;
-      text-align: center;
+    .content {
+      display: none;
+      margin-top: 15px;
     }
 
-    /* Green color for all titles */
-    .title-green {
-      color: #28a745; /* Change this to your preferred green */
+    .articles article, .projects .project {
+      margin-bottom: 25px;
     }
-      .articles article p {
+
+    .articles article p {
       text-align: justify;
     }
+
+    .title-green {
+      color: #28a745;
+    }
   </style>
+  <script>
+    function toggleContent(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -49,39 +64,50 @@
     <main>
       <h2>Research & Projects</h2>
 
-      <!-- Undergraduate Thesis -->
-      <section class="thesis">
-        <h3>Undergraduate Thesis</h3>
-        <h4 class="title-green">Title: Atomistic Simulation of Mechanical Behavior and Deformation Mechanism in HfNbTaTiZr High Entropy Alloy: Influence of Strain Rate and Temperature</h4>
-        <p><em>Status:</em> Under review in <strong>Result in Materials</strong></p>
+      <!-- Research Experience -->
+      <section class="experience">
+        <h3>Research Experience</h3>
+        <p><strong>Undergraduate Thesis Work (February 2023 – March 2024)</strong></p>
+        <p>Department of Materials Science and Engineering</p>
+        <p>Khulna University of Engineering and Technology, Khulna</p>
+        <p><em>Topic:</em> Investigation of the mechanical properties of BCC High entropy alloy under extreme conditions.</p>
+        <p><em>Thesis Supervisor:</em> Wahidur Rahman Sajal</p>
       </section>
 
-      <!-- Published Articles -->
-      <section class="articles">
-        <h3>Published Articles</h3>
+      <!-- Publications Section -->
+      <div class="toggle-section" onclick="toggleContent('pub-content')">
+        <h3>Publications</h3>
+        <img src="images/research.jpeg" alt="Publications">
+      </div>
+      <div id="pub-content" class="content articles">
+        
+        <!-- First Publication -->
         <article>
-          <h4 class="title-green">Effect of alloying element content, temperature, and strain rate on the mechanical behavior of NbTiZrMoV high entropy alloy: A molecular dynamics study.</h4>
-          <p><strong>Abstract:</strong> High entropy alloys (HEAs) have drawn attention among researchers due to their excellent mechanical properties at low and high temperatures, which pave the way for their numerous applications in various sectors. In this study, we have investigated the effect of temperature and strain rate on the mechanical properties of single crystal equimolar NbTiZrMoV alloy, a refractory HEA (RHEA), using molecular dynamics simulation with the help of a newly developed modified embedded atom method (MEAM) potential. Uniaxial tensile simulations were conducted along x-direction at temperatures between 77 K and 600 K, with temperature intervals of 100 K, and at strain rates of 0.001 ps−1, 0.005 ps−1, 0.025 ps−1, and 0.125 ps−1. Stress-strain curves were plotted from the simulation data, and different tensile properties of the alloy were calculated from the graph. This study suggests that the tensile strength and the elastic modulus of the HEA decrease with increasing temperature as the materials become soft at higher temperatures. Strain rate improves the tensile mechanical properties with increasing rate due to the lack of required time for atom rearrangement and dislocation entrapment requiring higher stresses to continue deformation. Ultimately, the tensile characteristics of the HEA are shown to be influenced by the content of alloying elements. Specifically, Mo content has a rising effect, and Nb content is having a reducing impact on the tensile properties of NbTiZrMoV HEA. The study provides insights into the mechanical properties of NbTiZrMoV HEA, which could inform its applications in various sectors due to its promising mechanical features at different temperatures and strain rates.</p>
-          <p><strong>Journal:</strong> Materials Today Communications</p>
-          <p><a href="https://doi.org/10.1016/j.mtcomm.2024.110071" target="_blank">Read Article</a></p>
-
-          <!-- Graphical Abstract Placeholder -->
-          <div class="graphical-abstract">
-             <a href="images/abstract.jpg" target="_blank">
-              <img src="images/abstract.jpg" alt="Graphical Abstract">
-            </a>
-          </div>
+          <h4 class="title-green"><strong>Rahat Hasan</strong>, Md Riazul Islam, Md Bokhtiar Hossen, Wahidur Rahman Sajal. Atomistic Simulation of Mechanical Behavior and Deformation Mechanism in HfNbTaTiZr High Entropy Alloy: Influence of Strain Rate and Temperature.</h4>
+          <p><strong>Abstract:</strong> High-entropy alloys (HEAs) represent a new class of structural materials offering exceptional mechanical strength, thermal stability, and corrosion resistance under extreme service conditions. Among them, body-centered cubic (BCC) refractory HEAs are particularly attractive but remain less understood compared to their FCC counterparts. This study aims to elucidate the mechanical response and deformation mechanisms of single-crystal HfNbTaTiZr HEA under varying thermal and loading conditions. Molecular dynamics (MD) simulations, based on a modified embedded atom method (MEAM) potential, were carried out under uniaxial tension at five temperatures (100–1200 K) and four strain rates (0.0005–0.01 ps-1). Stress–strain analysis revealed a maximum ultimate tensile strength (13.94 GPa) and Young’s modulus (180.14 GPa) at 100 K and the highest strain rate. Both properties decreased with temperature due to atomic softening but increased with strain rate as limited time for defect evolution enhanced strength. Adaptive common neighbor analysis (ACNA) showed that BCC-to-amorphous transformation is the primary deformation mechanism, while intrinsic stacking faults dominate at elevated temperatures and low strain rates. These results advance the understanding of temperature- and strain-rate-dependent behavior in refractory HEAs, offering guidance for the design of BCC HEAs with improved mechanical performance for high-temperature applications.</p>
+          <p><strong>Journal:</strong> Results in Materials (2025) </p>
+          <p><a href="https://www.sciencedirect.com/science/article/pii/S2590048X25001244?via%3Dihub" target="_blank">Read Article</a></p>
         </article>
-      </section>
 
-      <!-- Projects -->
-      <section class="projects">
+        <!-- Second Publication -->
+        <article>
+          <h4 class="title-green">Md Riazul Islam, Jahirul Islam, <strong>Rahat Hasan</strong>, Mahmudul Hasan. Effect of alloying element content, temperature, and strain rate on the mechanical behavior of NbTiZrMoV high entropy alloy: A molecular dynamics study.</h4>
+          <p><strong>Abstract:</strong> High entropy alloys (HEAs) have drawn attention among researchers due to their excellent mechanical properties at low and high temperatures, which pave the way for their numerous applications in various sectors. In this study, we have investigated the effect of temperature and strain rate on the mechanical properties of single crystal equimolar NbTiZrMoV alloy, a refractory HEA (RHEA), using molecular dynamics simulation with the help of a newly developed modified embedded atom method (MEAM) potential. Uniaxial tensile simulations were conducted along x-direction at temperatures between 77 K and 600 K, with temperature intervals of 100 K, and at strain rates of 0.001 ps−1, 0.005 ps−1, 0.025 ps−1, and 0.125 ps−1. Stress-strain curves were plotted, and tensile properties of the alloy were calculated. Results show that tensile strength and elastic modulus decrease with temperature, but strain rate improves the properties. Mo increases strength while Nb reduces it, offering insights into applications of NbTiZrMoV HEA in varied conditions.</p>
+          <p><strong>Journal:</strong> Materials Today Communications (2024)</p>
+          <p><a href="https://doi.org/10.1016/j.mtcomm.2024.110071" target="_blank">Read Article</a></p>
+        </article>
+      </div>
+
+      <!-- Projects Section -->
+      <div class="toggle-section" onclick="toggleContent('proj-content')">
         <h3>Projects</h3>
-
+        <img src="images/project.png" alt="Projects">
+      </div>
+      <div id="proj-content" class="content projects">
         <div class="project">
           <h4 class="title-green">Alternative materials selection for badminton racket using CES Edupack - June 2023</h4>
           <div class="project-photo">
-              <a href="images/poster.png" target="_blank">
+            <a href="images/poster.png" target="_blank">
               <img src="images/poster.png" alt="Badminton Racket Project Photo">
             </a>
           </div>
@@ -90,12 +116,12 @@
         <div class="project">
           <h4 class="title-green">Design of per day 50 ton capacity ferritic stainless steel ingot production plant - November 2022</h4>
           <div class="project-photo">
-              <a href="images/poster backup.png" target="_blank">
+            <a href="images/poster backup.png" target="_blank">
               <img src="images/poster backup.png" alt="Stainless Steel Plant Project Photo">
             </a>
           </div>
         </div>
-      </section>
+      </div>
 
     </main>
 
@@ -105,3 +131,4 @@
   </div>
 </body>
 </html>
+```
